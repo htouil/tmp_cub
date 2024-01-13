@@ -6,7 +6,7 @@
 /*   By: htouil <htouil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/30 20:05:16 by htouil            #+#    #+#             */
-/*   Updated: 2024/01/12 17:26:39 by htouil           ###   ########.fr       */
+/*   Updated: 2024/01/13 22:06:32 by htouil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	display_map_errors1(t_map *map)
 	if (check_map_content(map) == 0)
 	{
 		ft_putstr_fd("Error\nThe map lacks \
-		or has more contents than needed!\n", 2);
+or has more contents than needed!\n", 2);
 		free_data(map);
 		// system("leaks cub3D");
 		exit(1);

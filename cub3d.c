@@ -6,7 +6,7 @@
 /*   By: htouil <htouil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 18:42:06 by aben-dhi          #+#    #+#             */
-/*   Updated: 2024/01/12 17:49:52 by htouil           ###   ########.fr       */
+/*   Updated: 2024/01/13 20:08:08 by htouil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,13 +61,13 @@ int	setup_game_data(char **av, t_map *map)
 	// printf("%s\n", map->ea);
 	// printf("%s\n", map->f);
 	// printf("%s\n", map->c);
-	int j = 0;
-	printf("rows: %d\n", map->rows);
-	while (j < map->rows)
-	{
-		printf("%s\n", map->map[j]);
-		j++;
-	}
+	// int j = 0;
+	// printf("rows: %d\n", map->rows);
+	// while (j < map->rows)
+	// {
+	// 	printf("%s\n", map->map[j]);
+	// 	j++;
+	// }
 	return (0);
 }
 

@@ -6,7 +6,7 @@
 /*   By: htouil <htouil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 20:56:17 by htouil            #+#    #+#             */
-/*   Updated: 2024/01/12 17:51:12 by htouil           ###   ########.fr       */
+/*   Updated: 2024/01/13 22:02:14 by htouil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ int	check_2(char **tmp)
 		i = -1;
 		while (tmp[j][++i])
 		{
+			// printf("char: [%c]\n", tmp[j][i]);
 			if (ft_isdigit(tmp[j][i]) == 0)
 				return (0);
 		}
@@ -64,12 +65,6 @@ int	check_rgb(t_map *map)
 		return (free_tmp(tmp), 0);
 	free_tmp(tmp);
 	tmp = ft_split(map->c, ',');
-	int j = 0;
-	while (tmp[j])
-	{
-		printf("[%s]\n", tmp[j]);
-		j++;
-	}
 	if (check_1(tmp, map->c) == 0 || check_2(tmp) == 0)
 		return (free_tmp(tmp), 0);
 	free_tmp(tmp);

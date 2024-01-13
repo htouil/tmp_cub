@@ -6,7 +6,7 @@
 /*   By: htouil <htouil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/30 19:32:06 by htouil            #+#    #+#             */
-/*   Updated: 2024/01/12 17:47:52 by htouil           ###   ########.fr       */
+/*   Updated: 2024/01/13 22:01:42 by htouil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ int	get_map_matrix(int fd, char *line, t_map *map)
 		if (!line)
 			break ;
 	}
+	// printf("lmap: [%s](%d)\n", map_str, ft_strlen1(map_str));
 	display_dnl_error(map_str);
 	map->map = ft_split(map_str, '\n');
 	if (check_empty_spaces(map->map[map->rows - 1]) == 0)

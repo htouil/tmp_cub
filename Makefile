@@ -18,7 +18,7 @@ OBJS	= $(SRCS:.c=.o) $(LIBFTSRC:.c=.o)  $(GNLSRC:.c=.o) #$(MLXSRC:.c=.o)
 
 CC		= cc
 
-FLAGS	= -Wall -Wextra -Werror #-fsanitize=address -g
+FLAGS	= -Wall -Wextra -Werror -fsanitize=address -g
 
 MLX		= -lmlx -framework OpenGL -framework AppKit #-fsanitize=address -g
 

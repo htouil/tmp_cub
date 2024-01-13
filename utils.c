@@ -6,7 +6,7 @@
 /*   By: htouil <htouil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 18:55:14 by aben-dhi          #+#    #+#             */
-/*   Updated: 2024/01/12 17:37:11 by htouil           ###   ########.fr       */
+/*   Updated: 2024/01/13 22:48:05 by htouil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_datacpy(char *src, int n)
 	if (!tmp)
 		exit(1);
 	j = 0;
-	while (src[i] != '\n')
+	while (src[i] != '\0' && src[i] != '\n')
 	{
 		tmp[j] = src[i];
 		i++;
@@ -119,19 +119,21 @@ int	check_double_nl(char *lmap)
 	int		i;
 
 	i = 0;
-	while (lmap[i])
+	while (lmap[i] != '\0')
 	{
-		if (lmap[i] && lmap[i] == '\n')
+		if (lmap[i] == '\n')
 		{
 			i++;
-			while (lmap[i] && lmap[i] == ' ')
+			while (lmap[i] != '\0' && lmap[i] == ' ')
 				i++;
-			if (lmap[i] && lmap[i] == '\n')
+			if (lmap[i] == '\0')
+				return (0);
+			else if (lmap[i] == '\n')
 			{
 				i++;
-				while (lmap[i] && lmap[i] == ' ')
+				while (lmap[i] != '\0' && lmap[i] == ' ')
 					i++;
-				if (lmap[i] && lmap[i] == '\n')
+				if (lmap[i] == '\0' || lmap[i] == '\n')
 					return (1);
 			}
 		}
