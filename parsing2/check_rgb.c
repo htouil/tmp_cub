@@ -6,7 +6,7 @@
 /*   By: htouil <htouil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 20:56:17 by htouil            #+#    #+#             */
-/*   Updated: 2024/01/13 22:02:14 by htouil           ###   ########.fr       */
+/*   Updated: 2024/01/16 20:03:00 by htouil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	check_2(char **tmp)
 		while (tmp[j][++i])
 		{
 			// printf("char: [%c]\n", tmp[j][i]);
-			if (ft_isdigit(tmp[j][i]) == 0)
+			if (ft_isdigit(tmp[j][i]) == 0 && tmp[j][i] != ' ')
 				return (0);
 		}
 		if (ft_atoi(tmp[j]) < 0 || ft_atoi(tmp[j]) > 255)

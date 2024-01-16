@@ -6,7 +6,7 @@
 /*   By: htouil <htouil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 18:42:06 by aben-dhi          #+#    #+#             */
-/*   Updated: 2024/01/13 20:08:08 by htouil           ###   ########.fr       */
+/*   Updated: 2024/01/16 19:58:38 by htouil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ int	main(int ac, char **av)
 			return (1);
 		if (setup_game_data(av, map) == 1)
 		{
-			system("leaks cub3D");
+			// system("leaks cub3D");
 			return (1);
 		}
 	}

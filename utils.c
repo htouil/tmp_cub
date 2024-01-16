@@ -6,7 +6,7 @@
 /*   By: htouil <htouil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 18:55:14 by aben-dhi          #+#    #+#             */
-/*   Updated: 2024/01/13 22:48:05 by htouil           ###   ########.fr       */
+/*   Updated: 2024/01/16 20:05:09 by htouil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_datacpy(char *src, int n)
 		return (NULL);
 	// src = src + 2;
 	i = n;
-	while (src[i] == ' ') //hmm???
+	while (src[i] == ' ' || src[i] == '\t') //hmm???
 		i++;
 	tmp = malloc((ft_strlen1(src) - i + 1) * sizeof(char));
 	if (!tmp)
@@ -56,7 +56,7 @@ char	*ft_datacpy(char *src, int n)
 
 char	*skip_spaces(char *str)
 {
-	while (*str && *str == ' ')
+	while (*str && (*str == ' ' || *str == '\t'))
 		str++;
 	return (str);
 }
@@ -66,7 +66,7 @@ int	avoid_spaces(char *str)
 	int	pos;
 
 	pos = 0;
-	while (str[pos] && str[pos] == ' ')
+	while (str[pos] && (str[pos] == ' ' || str[pos] == '\t'))
 		pos++;
 	return (pos);
 }
@@ -76,7 +76,7 @@ int	reverse_avoid_spaces(char *str)
 	int	pos;
 
 	pos = ft_strlen1(str) - 1;
-	while (str[pos] && str[pos] == ' ')
+	while (str[pos] && (str[pos] == ' ' || str[pos] == '\t'))
 		pos--;
 	return (pos);
 }
@@ -98,10 +98,10 @@ int	check_empty_spaces(char *str)
 		return (0);
 	while (str[i])
 	{
-		if (str[0] == '\0' || (str[i] != ' ' && str[i] != '\n'))
+		if (str[0] == '\0' || (str[i] != ' ' && str[i] != '\t' && str[i] != '\n'))
 		{
 			tmp = str;
-			// tmp = skip_spaces(tmp);
+			tmp = skip_spaces(tmp);
 			if (ft_strlcmp(tmp, "NO", 2) == 0 || ft_strlcmp(tmp, "SO", 2) == 0
 				|| ft_strlcmp(tmp, "WE", 2) == 0
 				|| ft_strlcmp(tmp, "EA", 2) == 0
@@ -124,14 +124,14 @@ int	check_double_nl(char *lmap)
 		if (lmap[i] == '\n')
 		{
 			i++;
-			while (lmap[i] != '\0' && lmap[i] == ' ')
+			while (lmap[i] != '\0' && (lmap[i] == ' ' || lmap[i] == '\t'))
 				i++;
 			if (lmap[i] == '\0')
 				return (0);
 			else if (lmap[i] == '\n')
 			{
 				i++;
-				while (lmap[i] != '\0' && lmap[i] == ' ')
+				while (lmap[i] != '\0' && (lmap[i] == ' ' || lmap[i] == '\t'))
 					i++;
 				if (lmap[i] == '\0' || lmap[i] == '\n')
 					return (1);
