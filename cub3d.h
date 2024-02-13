@@ -6,7 +6,7 @@
 /*   By: htouil <htouil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 18:41:37 by aben-dhi          #+#    #+#             */
-/*   Updated: 2024/01/07 18:08:30 by htouil           ###   ########.fr       */
+/*   Updated: 2024/02/13 19:47:38 by htouil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,6 @@ typedef struct s_map
 	int		posx;
 	int		posy;
 }	t_map;
-
-// int		read_map(int fd, t_map *map, char *path);
-// void	save_dir(t_map *map);
-// int		save_fc(t_map *map);
-// void	save_map(t_map *map, int pos);
-// int		checkwalls(int x, int y, t_map *map);
-// void	save_tmp(t_map *map);
-// int    	last_pos(t_map *map);
 
 //cub3d functions:
 void	read_map(int fd, t_map *map);

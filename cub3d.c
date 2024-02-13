@@ -6,7 +6,7 @@
 /*   By: htouil <htouil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 18:42:06 by aben-dhi          #+#    #+#             */
-/*   Updated: 2024/01/16 19:58:38 by htouil           ###   ########.fr       */
+/*   Updated: 2024/02/13 19:47:23 by htouil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	setup_game_data(char **av, t_map *map)
 	read_map(fd, map);
 	display_map_errors1(map);
 	display_map_errors2(map);
-	printf("ALL GOOD!!!\n");
+	// printf("ALL GOOD!!!\n");
 	// printf("%s\n", map->no);
 	// printf("%s\n", map->so);
 	// printf("%s\n", map->we);
@@ -90,101 +90,6 @@ int	main(int ac, char **av)
 	else
 		return (ft_putstr_fd("Error\nInvalid number of arguments!\n", 2), 1);
 	free_data(map);
-	// system("leaks --fullContent cub3D");
-	// while (1);
-	// system("leaks --trace=0x7fe8be40e200 cub3D");
+	// system("leaks cub3D");
 	return (0);
 }
-
-// int main(int ac, char **av)
-// {
-// 	main1(ac, av);
-// 	system(leaks cub3D)
-// }
-
-// int	main(void)
-// {
-// 	char	*line;
-// 	int		fd;
-
-// 	fd = open("text.txt", O_RDONLY);
-// 	line = get_next_line(fd);
-// 	if (!line)
-// 	{
-// 		printf("shit");
-// 		return (1);
-// 	}
-// 	while (1)
-// 	{
-// 		printf("%s", line);
-// 		free(line);
-// 		line = get_next_line(fd);
-// 		if (!line)
-// 		{
-// 			printf("shit");
-// 			return (1);
-// 		}
-// 	}
-// 	return (0);
-// }
-
-// int	main(void)
-// {
-// 	char	*line;
-// 	int		fd;
-
-// 	fd = open("text.txt", O_RDONLY);
-// 	line = get_next_line(fd);
-// 	if (line)
-// 		printf("1: %s(yes)\n", line);
-// 	else
-// 		printf("1: %s(no)\n", line);
-// 	free(line);
-// 	line = get_next_line(fd);
-// 	if (line)
-// 		printf("2: %s(yes)\n", line);
-// 	else
-// 		printf("2: %s(no)\n", line);
-// 	free(line);
-// 	line = get_next_line(fd);
-// 	if (line)
-// 		printf("3: %s(yes)\n", line);
-// 	else
-// 		printf("3: %s(no)\n", line);
-// 	free(line);
-// 	line = get_next_line(fd);
-// 	if (line)
-// 		printf("4: %s(yes)\n", line);
-// 	else
-// 		printf("4: %s(no)\n", line);
-// 	free(line);
-// 	close(fd);
-// 	return (0);
-// }
-
-// int	main(void)
-// {
-// 	int		i;
-// 	int		*len = NULL;
-// 	int		fd;
-// 	char	*line;
-
-// 	fd = open("text.txt", O_RDONLY);
-// 	i = 0;
-// 	line = get_next_line(fd);
-// 	printf("ZEBBI");
-// 	// len = malloc (3 * sizeof(int));
-// 	len = ft_calloc(3, 4);
-// 	len[i] = ft_strlen1(line) - 1;
-// 	printf("1: %s(%d)\n", line, len[i++]);
-// 	free(line);
-// 	line = get_next_line(fd);
-// 	len[i] = ft_strlen1(line) - 1;
-// 	printf("2: %s(%d)\n", line, len[i++]);
-// 	free(line);
-// 	line = get_next_line(fd);
-// 	len[i] = ft_strlen1(line) - 1;
-// 	printf("3: %s(%d)\n", line, len[i++]);
-// 	free(line);
-// 	close(fd);
-// }
