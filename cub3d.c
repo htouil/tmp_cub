@@ -6,7 +6,7 @@
 /*   By: htouil <htouil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 18:42:06 by aben-dhi          #+#    #+#             */
-/*   Updated: 2024/02/13 19:47:23 by htouil           ###   ########.fr       */
+/*   Updated: 2024/02/14 19:17:56 by htouil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	setup_game_data(char **av, t_map *map)
 	read_map(fd, map);
 	display_map_errors1(map);
 	display_map_errors2(map);
-	// printf("ALL GOOD!!!\n");
+	printf("ALL GOOD!!!\n");
 	// printf("%s\n", map->no);
 	// printf("%s\n", map->so);
 	// printf("%s\n", map->we);
@@ -71,7 +71,6 @@ int	setup_game_data(char **av, t_map *map)
 	return (0);
 }
 
-//now in test rgb 20//
 int	main(int ac, char **av)
 {
 	t_map	*map;

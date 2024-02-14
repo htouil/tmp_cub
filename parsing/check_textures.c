@@ -6,7 +6,7 @@
 /*   By: htouil <htouil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 00:28:53 by htouil            #+#    #+#             */
-/*   Updated: 2024/01/12 17:40:58 by htouil           ###   ########.fr       */
+/*   Updated: 2024/02/14 18:49:14 by htouil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,10 @@ int	check_no(t_map *map)
 
 	ext = ft_strrchr(map->no, '.');
 	len = ft_strlen1(ext);
-	// printf("ext: [%s](%d)\n", ext, len);
 	if (!ext || len != 4 || ext[len - 1] != 'g' || ext[len - 2] != 'n'
 		|| ext[len - 3] != 'p' || ext[len - 4] != '.')
 		return (0);
 	fd = open(map->no, O_RDONLY);
-	// printf("fd: %d\n", fd);
 	if (fd == -1)
 		return (0);
 	close(fd);

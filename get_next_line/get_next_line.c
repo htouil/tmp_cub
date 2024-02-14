@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: htouil <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: htouil <htouil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 16:57:34 by htouil            #+#    #+#             */
-/*   Updated: 2023/03/13 16:56:27 by htouil           ###   ########.fr       */
+/*   Updated: 2024/02/14 19:13:29 by htouil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 char	*ft_read(int fd, char *cell)
 {
 	char	*buffer;
-	// char	*tmp;
 	int		rd;
 
 	buffer = malloc((BUFFER_SIZE + 1) * sizeof(char));
@@ -33,9 +32,7 @@ char	*ft_read(int fd, char *cell)
 			return (NULL);
 		}
 		buffer[rd] = '\0';
-		// tmp = cell;
 		cell = ft_strjoin1(cell, buffer);
-		// free(tmp);
 	}
 	free (buffer);
 	return (cell);
@@ -108,11 +105,7 @@ char	*get_next_line(int fd)
 	if (!cell)
 		return (NULL);
 	one_line = get_one_line(cell);
-	// printf("-----------------------\n");
-	// printf("old cell: [%s]\n", cell);
 	cell = get_new_line(cell);
-	// printf("new cell: [%s]\n", cell);
-	// printf("-----------------------\n");
 	return (one_line);
 }
 
